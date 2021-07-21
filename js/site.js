@@ -2,14 +2,11 @@ var ChatApp = window.ChatApp || {};
 
 (function scopeWrapper($) {
 
-    // Define temp user
     var currentUsername = 'Student';
+    var apiEndpoint = ChatApp.apiEndpoint;
 
     ChatApp.populateChats = function () {
-        
-        $.get('data/conversations.json').done(function (data) {
-            
-            // Get all the users
+        $.get(apiEndpoint + '/conversations').done(function (data) {
             data.forEach(function (convo) {
                 var otherUsers = [];
                 convo.participants.forEach(function (user) {
@@ -20,24 +17,20 @@ var ChatApp = window.ChatApp || {};
 
                 $('TBODY').append('<tr><td><a href="chat.html#' + convo.id + '">' + otherUsers.join(', ') + '</a></td></tr>');
             });
-
             $('TBODY').append('<tr><td></td></tr>');
         });
     };
 
     ChatApp.loadChat = function () {
-       
         $.get('data/conversations/' + location.hash.substring(1) + '.json').done(function (result) {
             result.messages.forEach(function (message) {
                 var panel = $('<div class="panel">');
-                
                 if (message.sender === currentUsername) {
                     panel.addClass('panel-default');
                 } else {
                     panel.addClass('panel-info');
                     panel.append('<div class="panel-heading">' + message.sender + '</div>');
                 }
-                
                 var body = $('<div class="panel-body">').text(message.message);
                 panel.append(body);
                 panel.append('<div class="panel-footer messageTime" data-time="' + message.time + '">' + moment(message.time).fromNow() + '</div>');
@@ -60,5 +53,4 @@ var ChatApp = window.ChatApp || {};
             window.scrollTo(0, document.body.scrollHeight);
         });
     };
-
 }(jQuery));
