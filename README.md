@@ -10,7 +10,6 @@ I wanted to explore AWS and the services it has to offer.  I ended up creating a
 * DynamoDB - Stores the messages on, letting the users to update and create data, as well read previous messages
 * Cognite - Allows the user to create custom usernames and passwords 
 * IAM - Used to handle policies and roles for each connected AWS service
-* Heroku - PaaS which hosts the site
 
 ## URL for the Application
 Coming soon :)
