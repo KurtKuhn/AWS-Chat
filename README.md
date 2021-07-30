@@ -6,7 +6,7 @@ I wanted to explore AWS and the services it has to offer.  I ended up creating a
 ## Technologies
 
 * AWS S3 - Hosts the basic site
-* A@S Lambda - Processes the logic and communication with various connected AWS services 
+* AWS Lambda - Processes the logic and communication with various connected AWS services 
 * DynamoDB - Stores the messages on, letting the users to update and create data, as well read previous messages
 * Cognite - Allows the user to create custom usernames and passwords 
 * IAM - Used to handle policies and roles for each connected AWS service
