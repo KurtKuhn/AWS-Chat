@@ -12,4 +12,4 @@ I wanted to explore AWS and the services it has to offer.  I ended up creating a
 * IAM - Used to handle policies and roles for each connected AWS service
 
 ## URL for the Application
-Coming soon :)
+http://kurtkuhn-aws-serverless-chat.s3-website-us-west-1.amazonaws.com/
