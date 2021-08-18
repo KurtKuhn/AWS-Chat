@@ -1,8 +1,6 @@
 # AWS Serverless Chat App
 I wanted to explore AWS and the services it has to offer.  I ended up creating a basic chat application that allows users to chat within their web browser.  It mimics Facebook Messenger or Slack
 
-## Note: This is a current work in progress
-
 ## Technologies
 
 * AWS S3 - Hosts the basic site
@@ -13,3 +11,6 @@ I wanted to explore AWS and the services it has to offer.  I ended up creating a
 
 ## URL for the Application
 http://kurtkuhn-aws-serverless-chat.s3-website-us-west-1.amazonaws.com/
+
+### Notes:
+August 18, 2021: The application is fully functional.  Fixed an known issue of users not being able to access chat history
